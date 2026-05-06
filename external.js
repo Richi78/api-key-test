@@ -1,4 +1,4 @@
-const API_BASE = 'https://unicen-bolsa-virtual-de-trabajo-dep.vercel.app/api/v1/'
+const API_BASE = 'https://unicen-bolsa-virtual-de-trabajo-dep.vercel.app/api/v1'
 
 function showAlert(message, type) {
   const alert = document.getElementById('alert')
