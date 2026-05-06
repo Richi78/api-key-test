@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test - External Partner Login</title>
+  <link rel="stylesheet" href="external.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Registro de Candidato Externo</h1>
+    <p class="subtitle">Partners - API Testing</p>
+
+    <div id="alert"></div>
+
+    <form id="externalForm">
+      <div class="form-group">
+        <label for="apiKey">API Key (Configurado en el .env del sistema externo)*</label>
+        <input type="text" id="apiKey" required placeholder="Ingrese API Key del partner">
+      </div>
+
+      <div class="row">
+        <div class="form-group">
+          <label for="firstName">Nombre *</label>
+          <input type="text" id="firstName" required placeholder="Nombre">
+        </div>
+        <div class="form-group">
+          <label for="lastName">Apellido *</label>
+          <input type="text" id="lastName" required placeholder="Apellido">
+        </div>
+      </div>
+
+      <!-- <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" required placeholder="email@ejemplo.com">
+      </div> -->
+
+      <div class="form-group">
+        <label for="password">Contraseña *</label>
+        <input type="password" id="password" required minlength="8" placeholder="Min. 8 caracteres">
+      </div>
+
+      <div class="form-group">
+        <label for="unicode">Cód. Unicén</label>
+        <input type="text" id="unicode" placeholder="Código Unicén">
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Teléfono *</label>
+        <input type="tel" id="phone" required placeholder="+591 70000000">
+      </div>
+
+      <div class="form-group">
+        <label for="campus">Sede *</label>
+        <select id="campus" required>
+          <option value="">Seleccione sede</option>
+          <option value="COCHABAMBA">Cochabamba</option>
+          <option value="LA_PAZ">La Paz</option>
+          <option value="SANTA_CRUZ">Santa Cruz</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <div class="form-group">
+          <label for="countryId">País (nombre) *</label>
+          <input type="text" id="countryId" required placeholder="ej: Bolivia">
+        </div>
+        <div class="form-group">
+          <label for="cityId">Ciudad (nombre) *</label>
+          <input type="text" id="cityId" required placeholder="ej: Cochabamba">
+        </div>
+      </div>
+
+      <button type="submit" id="submitBtn">Crear / Iniciar Sesión</button>
+    </form>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="external.js"></script>
+</body>
+</html>
